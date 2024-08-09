@@ -1,23 +1,26 @@
-#  Write a program in Python that prompts the user to input a number and prints its
-# multiplication table.
 
-def multiplication_table(n):
-    for i in range(1, 11):
-        print(f"{n} x {i} = {n * i}")
+# Write a python script that displays the following table
+# 1 1 1 1 1
+# 2 1 2 4 8
+# 3 1 3 9 27
+# 4 1 4 16 64
+# 5 1 5 25 125
 
-number = int(input("Enter a number: "))
-multiplication_table(number)
+
+def print_table(rows):
+    
+    for n in range(1, rows + 1):
+        row = [n, n**0, n**1, n**2, n**3]
+        print(" ".join(map(str, row)))
+
+rows = int(input("Enter number : "))
+print_table(rows)
 
 # Output
 
-# Enter a number: 2
-# 2 x 1 = 2
-# 2 x 2 = 4
-# 2 x 3 = 6
-# 2 x 4 = 8
-# 2 x 5 = 10
-# 2 x 6 = 12
-# 2 x 7 = 14
-# 2 x 8 = 16
-# 2 x 9 = 18
-# 2 x 10 = 20
+# Enter number : 5
+# 1 1 1 1 1
+# 2 1 2 4 8
+# 3 1 3 9 27
+# 4 1 4 16 64
+# 5 1 5 25 125

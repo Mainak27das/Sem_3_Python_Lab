@@ -1,17 +1,18 @@
-# Define a sum function with two parameters and call the function
+#  Compute the sum up to n terms in the series
+# 1 - 1/2 + 1/3 - 1/4 + 1/5 -... 1/n where n is a positive integer and input by user.
 
-def sum(n1, n2):
-    return n1 + n2
+def sum(n):
+    i=1
+    s=0.0
 
-n1 = int(input("Enter 1 number: "))
-n2 = int(input("Enter 2 number: "))
+    for i in range(1,n+1):
+        s=s+1/i
+    return s
 
-result = sum(n1, n2)
+n=int(input("Enter number : "))
+print("Answer : ",round(sum(n),2))
 
-print(f"The sum of {n1} and {n2} is: {result}")
+# Output
 
-# Output 
-
-# Enter 1 number: 5
-# Enter 2 number: 3
-# The sum of 5 and 3 is: 8
+# Enter number : 10
+# Answer :  2.93

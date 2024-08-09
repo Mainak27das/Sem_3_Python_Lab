@@ -1,15 +1,35 @@
-# Function to convert decimal to binary
+# Print the pattern upto N Lines:
+
+# .
+# /_\
+# .
+# / \
+# /___\
+# .
+# / \
+# / \
+# /_____\
+
+# N=2 N=3 N=4
 
 
-def decimal_to_binary(n):
-    return bin(n).replace("0b", "")
+def print_pattern(N):
 
-decimal_number = int(input("Enter a decimal number: "))
+    print(" " * (N - 1) + ".")
+    for i in range(1, N):
+        print(" " * (N - i - 1) + "/" + " " * (2 * i - 1) + "\\")
 
-binary_number = decimal_to_binary(decimal_number)
-print(f"Binary representation: {binary_number}")
+    if N > 1:
+        print("/" + "_" * (2 * N - 2) + "\\")
+
+N = int(input("Enter the number of lines N: "))
+print_pattern(N)
 
 # Output
 
-# Enter a decimal number: 10
-# Binary representation: 1010
+# Enter the number of lines N: 4
+#    .
+#   / \
+#  /   \
+# /     \
+# /______\

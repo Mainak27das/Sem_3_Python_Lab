@@ -1,24 +1,29 @@
-# Compute a)5 to the power of 8 b)square root of 400 c)exponent of 5 d)Logarithm of 625
-# base 5
+#  Declare a function named print_list. It takes a list as a parameter and it prints out each
+# element of the list.
 
-import math
+def print_list(my_list):
 
-a = 5 ** 8
+  for item in my_list:
+    print(item)
 
-b = math.sqrt(400)
+num = int(input("Enter no.of elements: "))
+my_list = []
+for i in range(num):
+  element = int(input(f"Enter element {i+1}: "))
+  my_list.append(element)
 
-c = math.exp(5)
-
-d = math.log(625, 5)
-
-print(f"5 to the power of 8: {a}")
-print(f"Square root of 400: {b}")
-print(f"Exponent of 5: {c}")
-print(f"Logarithm of 625 with base 5: {d}")
+print_list(my_list)
 
 # Output
 
-# 5 to the power of 8: 390625
-# Square root of 400: 20.0
-# Exponent of 5: 148.4131591025766 
-# Logarithm of 625 with base 5: 4.0
+# Enter no.of elements: 5
+# Enter element 1: 1
+# Enter element 2: 2
+# Enter element 3: 3
+# Enter element 4: 4
+# Enter element 5: 5
+# 1
+# 2
+# 3
+# 4
+# 5

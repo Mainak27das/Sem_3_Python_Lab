@@ -1,18 +1,27 @@
-# Find GCD of two numbers
+#  Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which
+# calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
 
-n1=int(input("Enter 1 number :"))
-n2=int(input("Enter 2 number :"))
+def solve_quadratic_eqn(a, b, c, x):
 
-while n1 != n2:
-    if n1>n2:
-        n1-=n2
-    else:
-        n2-=n1
+  result = a * (x**2) + b * x + c
+  return result
 
-print(n1)
+print("Quadratic Equation: ax² + bx + c = 0")
 
-# Output 
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+c = int(input("Enter c: "))
+x = int(input("\nEnter x: "))
 
-# Enter 1 number :36
-# Enter 2 number :60
-# 12
+result = solve_quadratic_eqn(a, b, c, x)
+print("The value of the equation for x =", x, "is:", result)
+
+# Output
+
+# Quadratic Equation: ax² + bx + c = 0
+# Enter a: 2
+# Enter b: 4
+# Enter c: 5
+
+# Enter x: 2
+# The value of the equation for x = 2 is: 21

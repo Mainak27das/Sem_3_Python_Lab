@@ -1,21 +1,21 @@
-# To find the sum of square root of any three numbers.
+# Write a function called check-season, it takes a month parameter and returns the season:
+# Autumn, Winter, Spring or Summer.
 
-import math
+s1=input('Enter Month : ')
 
-n1=int(input("Enter 1 number :"))
-n2=int(input("Enter 2 number :"))
-n3=int(input("Enter 3 number :"))
+def checkseason():
+    if s1 == "December" or s1 =="January" or s1 =="February":
+        print("Winter")
+    elif s1 == "March" or  s1 =="April" or s1 =="May":
+        print("Spring")
+    elif s1 == "June" or  s1 =="July" or s1 =="August":
+        print("Summer")
+    else:
+        print("Autumn")
+    
+checkseason()
 
-sq1=(math.sqrt(n1))
-sq2=(math.sqrt(n2))
-sq3=(math.sqrt(n3))
+# Output
 
-sum=sq1+sq2+sq3
-
-print("Sum : ",sum)
-
-# Output:
-# Enter 1 number :9
-# Enter 2 number :25
-# Enter 3 number :16
-# Sum :  12.0
+# Enter Month : June
+# Summer
