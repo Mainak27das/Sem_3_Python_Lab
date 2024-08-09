@@ -1,15 +1,18 @@
-# WAP to check whether a number is a palindrome or not
+# Write a function to calculate the power of a number using recursion
 
-n=int(input("Enter number : "))
-num=n
-r=0
+def power(base, exp):
+    if exp == 0:
+        return 1
+    else:
+        return base * power(base, exp - 1)
 
-while n>0:
-    temp=n%10
-    r=r*10+temp
-    n=n//10
+base = int(input("Enter the base number: "))
+exp = int(input("Enter the exponent: "))
+result = power(base, exp)
+print(f"{base} to the power of {exp} is: {result}")
 
-if num==r:
-    print("Palindrom")
-else:
-    print("Not")
+# Output
+
+# Enter the base number: 4
+# Enter the exponent: 8
+# 4 to the power of 8 is: 65536

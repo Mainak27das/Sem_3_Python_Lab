@@ -1,29 +1,15 @@
-# WAP to check whether a)is a perfect number b)is an Armstrong number
+# Function to convert decimal to binary
 
-def is_perfect(n):
-    if n < 1:
-        return False
-    sum_of_divisors = 0
-    for i in range(1, n):
-        if n % i == 0:
-            sum_of_divisors += i
-    return sum_of_divisors == n
 
-def is_armstrong(n):
-    num_str = str(n)
-    power = len(num_str)
-    sum_of_powers = sum(int(digit) ** power for digit in num_str)
-    return sum_of_powers == n
+def decimal_to_binary(n):
+    return bin(n).replace("0b", "")
 
-number = int(input("Enter a number: "))
+decimal_number = int(input("Enter a decimal number: "))
 
-if is_perfect(number):
-    print(f"{number} is a Perfect number.")
-else:
-    print(f"{number} is not a Perfect number.")
+binary_number = decimal_to_binary(decimal_number)
+print(f"Binary representation: {binary_number}")
 
-if is_armstrong(number):
-    print(f"{number} is an Armstrong number.")
-else:
-    print(f"{number} is not an Armstrong number.")
+# Output
 
+# Enter a decimal number: 10
+# Binary representation: 1010
